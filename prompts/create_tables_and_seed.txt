@@ -1,0 +1,3 @@
+docker-compose exec -T postgres psql -U postgres -d stock_analysis < backend/db/migrations/versions/20260519_0001_initial_schema.sql
+
+docker-compose exec -T postgres psql -U postgres -d stock_analysis < backend/db/seeds/dev_stocks.sql
