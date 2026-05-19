@@ -1,0 +1,120 @@
+Você é um arquiteto de software senior especializado em:
+- sistemas financeiros
+- IA
+- aplicações escaláveis
+- SaaS modernos
+- Python
+- Next.js
+
+Com base no PRD do projeto, crie a arquitetura técnica COMPLETA da plataforma.
+
+STACK:
+- Frontend: Next.js 15 + TypeScript
+- Backend: FastAPI + Python
+- Banco: PostgreSQL
+- Deploy: Vercel + Supabase
+- Jobs: APScheduler/Cron
+- IA: OpenAI API
+- Cache: Redis (se necessário)
+
+OBJETIVOS:
+- baixo custo
+- alta performance
+- respostas rápidas
+- processamento assíncrono
+- análises pré-processadas
+- mínimo uso de IA em tempo real
+- arquitetura modular
+- fácil manutenção
+- fácil escalabilidade
+
+DEFINA:
+
+1. Arquitetura geral
+- frontend
+- backend
+- banco
+- cron jobs
+- IA
+- cache
+- serviços
+
+2. Fluxo completo de dados
+- coleta financeira
+- processamento
+- cálculo de score
+- análise IA
+- armazenamento
+- consumo pelo frontend
+
+3. Estrutura COMPLETA de pastas:
+- frontend
+- backend
+
+4. Backend architecture:
+- modules
+- services
+- repositories
+- domain
+- DTOs
+- entities
+- jobs
+- providers
+- adapters
+
+5. Estratégia de processamento noturno
+- ordem dos jobs
+- retries
+- idempotência
+- tolerância a falhas
+
+6. Estratégia de IA
+- onde IA será usada
+- onde NÃO usar IA
+- versionamento de prompts
+- cache
+- redução de custo
+
+7. Estratégia de banco de dados
+- tabelas
+- relacionamentos
+- histórico temporal
+- índices
+- performance
+
+8. Estratégia de APIs externas
+- Yahoo Finance
+- notícias
+- sentiment analysis
+
+9. Estratégia de frontend
+- server components
+- client components
+- cache
+- SEO
+- loading states
+
+10. Estratégia de autenticação futura
+
+11. Estratégia de observabilidade
+- logs
+- tracing
+- monitoramento
+
+12. Estratégia de deploy
+
+13. Estratégia de ambiente local
+
+14. Docker strategy
+
+15. Roadmap técnico do MVP
+
+16. Riscos técnicos e mitigação
+
+17. Recomendações de design patterns
+
+18. Estratégia para crescimento futuro
+
+IMPORTANTE:
+A resposta deve ser extremamente prática e detalhada.
+Quero uma arquitetura production-ready.

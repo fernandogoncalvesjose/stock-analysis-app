@@ -1,0 +1,51 @@
+Você é um engenheiro frontend senior especialista em:
+- Next.js 15
+- TypeScript
+- Tailwind
+- arquitetura escalável
+- plataformas financeiras
+
+Crie o scaffold COMPLETO de um projeto Next.js 15 production-ready.
+
+REQUISITOS:
+- App Router
+- TypeScript
+- Tailwind
+- shadcn/ui
+- ESLint
+- Prettier
+- aliases
+- tema dark/light
+- arquitetura modular
+- clean code
+- responsividade
+- estrutura escalável
+
+CRIE:
+- estrutura completa de pastas
+- providers
+- lib
+- hooks
+- services
+- features
+- layout principal
+- navbar
+- sidebar
+- dashboard shell
+- homepage profissional
+- loading states
+- error boundaries
+- configuração de fontes
+- configuração de tema
+
+VISUAL:
+Inspirado em:
+- TradingView
+- Yahoo Finance
+- Status Invest
+
+IMPORTANTE:
+- usar Server Components quando possível
+- otimizar performance
+- separar client/server components
+- production-ready

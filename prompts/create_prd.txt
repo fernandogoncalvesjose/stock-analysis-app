@@ -1,0 +1,51 @@
+Você é um Product Manager senior e arquiteto de software.
+
+Quero criar uma plataforma web de análise de ações usando IA.
+
+OBJETIVO:
+Criar uma plataforma que permita:
+
+1. Buscar uma ação e visualizar:
+- análise fundamentalista
+- análise de dividendos
+- análise técnica simples
+- indicadores financeiros
+- resumo da empresa
+- riscos
+- notícias relevantes
+- recomendação:
+  - comprar
+  - manter
+  - vender
+
+2. Exibir um ranking diário das melhores ações focadas em dividendos.
+
+REQUISITOS IMPORTANTES:
+- baixo custo operacional
+- análises pré-processadas durante a madrugada
+- mínimo uso de IA em tempo real
+- respostas rápidas
+- arquitetura escalável
+- backend Python
+- frontend Next.js
+- PostgreSQL
+- deploy na Vercel e Supabase
+
+IMPORTANTE:
+A recomendação NÃO deve ser decidida pela IA.
+A IA apenas explica scores matemáticos previamente calculados.
+
+Crie um PRD COMPLETO contendo:
+- visão do produto
+- personas
+- funcionalidades
+- fluxo do usuário
+- regras de negócio
+- arquitetura de alto nível
+- requisitos funcionais
+- requisitos não funcionais
+- roadmap MVP
+- futuras evoluções
+- riscos técnicos
+- estratégia de baixo custo
+- estrutura inicial dos módulos
