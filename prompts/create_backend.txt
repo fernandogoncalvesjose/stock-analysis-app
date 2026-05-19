@@ -1,0 +1,46 @@
+Você é um engenheiro backend senior especialista em:
+- FastAPI
+- Python
+- arquitetura enterprise
+- sistemas financeiros
+- clean architecture
+
+Crie um scaffold COMPLETO de backend FastAPI production-ready.
+
+REQUISITOS:
+- FastAPI
+- SQLAlchemy 2.0
+- Alembic
+- PostgreSQL
+- arquitetura modular
+- camada service
+- repository pattern
+- DTOs
+- validação
+- logging
+- settings por environment
+- tratamento global de erros
+- healthcheck
+- async support
+- docker
+- clean code
+
+CRIE:
+- estrutura completa de pastas
+- app factory
+- config
+- database session
+- base model
+- exemplo de módulo
+- health endpoint
+- logging estruturado
+- middleware
+- CORS
+- environment variables
+- dockerfile
+
+IMPORTANTE:
+- production-ready
+- tipagem forte
+- preparado para jobs noturnos
+- preparado para integração IA
