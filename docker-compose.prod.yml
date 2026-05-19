@@ -1,0 +1,21 @@
+services:
+  backend:
+    build:
+      target: production
+    environment:
+      ENVIRONMENT: production
+      DEBUG: "false"
+      ENABLE_DOCS: "false"
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-stock_analysis}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000}
+    volumes: []
+
+  frontend:
+    build:
+      target: production
+    environment:
+      API_INTERNAL_URL: http://backend:8000
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+      NEXT_PUBLIC_USE_MOCK_API: "false"
+      WATCHPACK_POLLING: "false"
+    volumes: []

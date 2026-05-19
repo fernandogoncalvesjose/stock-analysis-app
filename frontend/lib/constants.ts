@@ -1,7 +1,11 @@
 export const B3_TICKER_REGEX = /^[A-Z]{4}\d{1,2}$/;
 
 export const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
+  typeof window === "undefined"
+    ? process.env.API_INTERNAL_URL ??
+      process.env.NEXT_PUBLIC_API_URL ??
+      "http://localhost:8000"
+    : process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
 export const DISCLAIMER =
   "Recomendação baseada em modelo quantitativo. Não constitui recomendação de investimento.";

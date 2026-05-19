@@ -1,0 +1,19 @@
+Crie um docker-compose production-ready para:
+
+- frontend Next.js
+- backend FastAPI
+- PostgreSQL
+
+REQUISITOS:
+- hot reload local
+- volumes
+- health checks
+- variáveis ambiente
+- rede compartilhada
+- persistência PostgreSQL
+- otimização de build
+
+Crie também:
+- Dockerfile frontend
+- Dockerfile backend
+- .dockerignore
