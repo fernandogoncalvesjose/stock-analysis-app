@@ -14,6 +14,7 @@ dependencies = [
     "python-json-logger>=2.0.7",
     "sqlalchemy>=2.0.35",
     "uvicorn[standard]>=0.30.6",
+    "yfinance>=0.2.54",
 ]
 
 [project.optional-dependencies]

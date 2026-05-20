@@ -1,0 +1,21 @@
+Implemente um YahooFinanceProvider usando yfinance.
+
+REQUISITOS:
+- retries
+- timeout
+- tratamento de erros
+- logging
+- normalização de dados
+- tipagem forte
+- clean code
+
+MÉTODOS:
+- get_stock_info
+- get_stock_metrics
+- get_price_history
+- get_dividends
+
+IMPORTANTE:
+- retornar dados normalizados
+- evitar inconsistências do Yahoo
+- production-ready

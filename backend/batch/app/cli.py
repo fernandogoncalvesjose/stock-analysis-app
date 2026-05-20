@@ -2,6 +2,10 @@ import argparse
 import asyncio
 from datetime import UTC, date, datetime
 
+from batch.app.bootstrap import configure_batch_pythonpath
+
+configure_batch_pythonpath()
+
 from batch.app.jobs.nightly_pipeline import NightlyPipeline
 
 

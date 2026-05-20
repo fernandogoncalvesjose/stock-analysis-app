@@ -1,0 +1,21 @@
+Você é um engenheiro backend senior especialista em:
+- Python
+- arquitetura limpa
+- provider pattern
+- sistemas financeiros
+
+Crie uma arquitetura de providers financeiros.
+
+REQUISITOS:
+- provider pattern
+- interfaces abstratas
+- desacoplamento
+- async ready
+- clean architecture
+- fácil troca de provider
+
+Crie:
+- base provider abstrato
+- métodos obrigatórios
+- tipagem forte
+- models de resposta
