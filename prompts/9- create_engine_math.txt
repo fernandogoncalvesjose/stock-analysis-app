@@ -1,0 +1,77 @@
+Você é um engenheiro backend senior e analista quantitativo.
+
+Crie um motor matemático de score para análise de ações.
+
+Contexto:
+A plataforma analisa ações com base em métricas financeiras já salvas no PostgreSQL.
+
+IMPORTANTE:
+A IA NÃO deve decidir a recomendação.
+A recomendação deve ser gerada apenas por regras matemáticas transparentes.
+
+Crie:
+- score_engine.py
+- score_rules.py
+- score_weights.py
+- score_dto.py
+
+Scores:
+- dividend_score
+- value_score
+- growth_score
+- profitability_score
+- risk_score
+- final_score
+
+Recomendação:
+- BUY
+- HOLD
+- SELL
+
+Escala:
+- todos os scores de 0 a 100
+
+Regras iniciais sugeridas:
+Dividend Score:
+- dividend_yield
+- payout_ratio
+- consistência de dividendos
+
+Value Score:
+- P/L
+- P/VP
+- EV/EBITDA
+
+Growth Score:
+- revenue_growth
+- profit_growth
+
+Profitability Score:
+- ROE
+- ROIC
+- net_margin
+- gross_margin
+
+Risk Score:
+- debt_to_equity
+- current_ratio
+- volatilidade se existir
+
+Pesos sugeridos:
+- dividend_score: 30%
+- profitability_score: 25%
+- value_score: 20%
+- risk_score: 15%
+- growth_score: 10%
+
+Regras:
+- tratar valores ausentes
+- não quebrar com None
+- usar dataclasses ou Pydantic
+- tipagem forte
+- código testável
+- logs
+- clean code
+- fácil ajuste futuro dos pesos
+
+Também crie exemplos de uso.

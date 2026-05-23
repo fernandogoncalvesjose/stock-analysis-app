@@ -1,0 +1,11 @@
+Implemente a lógica do ranking Top Dividendos.
+
+Critérios:
+- considerar apenas ações com métricas e scores do dia mais recente
+- dividend_yield maior que 4%
+- payout_ratio menor que 90%
+- final_score maior ou igual a 50
+- ordenar por dividend_score desc, final_score desc, risk_score desc
+- limitar top 10
+
+Crie repository/service/endpoint se necessário.

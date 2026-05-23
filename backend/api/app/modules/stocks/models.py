@@ -91,6 +91,34 @@ class StockMetricsSnapshot(Base, TimestampMixin, UUIDPrimaryKeyMixin):
     stock: Mapped[Stock] = relationship(back_populates="metric_snapshots")
 
 
+class StockScore(Base, TimestampMixin, UUIDPrimaryKeyMixin):
+    __tablename__ = "stock_scores"
+    __table_args__ = (
+        UniqueConstraint("stock_id", "reference_date", name="uq_stock_score_stock_reference"),
+        Index("ix_stock_scores_ticker_reference_date", "ticker", "reference_date"),
+    )
+
+    stock_id: Mapped[uuid.UUID] = mapped_column(
+        Uuid(as_uuid=True),
+        ForeignKey("stocks.id", ondelete="CASCADE"),
+        nullable=False,
+    )
+    ticker: Mapped[str] = mapped_column(String(12), nullable=False)
+    reference_date: Mapped[date] = mapped_column(Date, nullable=False)
+
+    dividend_score: Mapped[Decimal | None] = mapped_column(Numeric(5, 2))
+    value_score: Mapped[Decimal | None] = mapped_column(Numeric(5, 2))
+    growth_score: Mapped[Decimal | None] = mapped_column(Numeric(5, 2))
+    profitability_score: Mapped[Decimal | None] = mapped_column(Numeric(5, 2))
+    risk_score: Mapped[Decimal | None] = mapped_column(Numeric(5, 2))
+    final_score: Mapped[Decimal | None] = mapped_column(Numeric(5, 2), nullable=False)
+    recommendation: Mapped[str] = mapped_column(String(8), nullable=False)
+
+    payload: Mapped[dict] = mapped_column(JSONB, nullable=False, default=dict)
+
+    stock: Mapped[Stock] = relationship()
+
+
 class StockPriceDaily(Base, TimestampMixin, UUIDPrimaryKeyMixin):
     __tablename__ = "stock_prices_daily"
     __table_args__ = (

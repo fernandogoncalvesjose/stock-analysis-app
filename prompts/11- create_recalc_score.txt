@@ -1,0 +1,14 @@
+Crie endpoints FastAPI para scores:
+
+POST /stocks/{ticker}/scores/recalculate
+GET /stocks/{ticker}/scores/latest
+GET /stocks/top-dividends
+
+Requisitos:
+- usar ScoreService
+- response models Pydantic
+- tratamento de erro
+- Swagger docs
+- async
+
+a explicacao em portugues

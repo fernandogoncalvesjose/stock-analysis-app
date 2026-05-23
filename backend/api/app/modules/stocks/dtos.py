@@ -41,3 +41,23 @@ class StockSearchResultDTO(BaseModel):
     ticker: str
     company_name: str
     sector: str | None = None
+
+
+class StockScoreDTO(BaseModel):
+    ticker: str
+    reference_date: date
+    dividend_score: Decimal | None = None
+    value_score: Decimal | None = None
+    growth_score: Decimal | None = None
+    profitability_score: Decimal | None = None
+    risk_score: Decimal | None = None
+    final_score: Decimal = Field(ge=0, le=100)
+    recommendation: Recommendation
+    payload: dict = Field(default_factory=dict)
+
+
+class RecalculateResponseDTO(BaseModel):
+    ok: bool
+    result: StockScoreDTO | None = None
+    reason: str | None = None
+    error: str | None = None

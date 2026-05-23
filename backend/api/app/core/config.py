@@ -32,7 +32,7 @@ class Settings(BaseSettings):
     openai_api_key: str | None = None
     enable_live_llm: bool = False
 
-    cors_origins: list[str] = ["http://localhost:3000"]
+    cors_origins: str | list[str] = ["http://localhost:3000"]
     log_level: str = "INFO"
     log_json: bool = True
     sentry_dsn: AnyUrl | None = None
@@ -44,7 +44,8 @@ class Settings(BaseSettings):
     @classmethod
     def parse_cors_origins(cls, value: str | list[str]) -> list[str]:
         if isinstance(value, str):
-            return [origin.strip() for origin in value.split(",") if origin.strip()]
+            origins = [origin.strip() for origin in value.split(",") if origin.strip()]
+            return origins or ["http://localhost:3000"]
         return value
 
     @field_validator("enable_docs")

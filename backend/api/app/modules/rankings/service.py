@@ -13,20 +13,26 @@ class RankingService:
         reference_date: date | None,
         limit: int,
     ) -> DividendRankingDTO:
-        snapshots = await self.repository.get_dividend_ranking(reference_date, limit)
-        effective_date = snapshots[0].reference_date if snapshots else reference_date
+        rows = await self.repository.get_dividend_ranking(reference_date, limit)
+        effective_date = rows[0][0].reference_date if rows else reference_date
         return DividendRankingDTO(
             reference_date=effective_date,
             items=[
                 DividendRankingItemDTO(
                     position=index,
-                    ticker=snapshot.ticker,
-                    company_name=snapshot.stock.company_name,
-                    sector=snapshot.stock.sector,
-                    dividend_yield=snapshot.dividend_yield,
-                    composite_score=snapshot.composite_score,
-                    recommendation=snapshot.recommendation,
+                    ticker=score.ticker,
+                    company_name=score.stock.company_name,
+                    sector=score.stock.sector,
+                    dividend_yield=metrics.dividend_yield,
+                    payout_ratio=(
+                        metrics.payload.get("payout_ratio")
+                        or metrics.payload.get("payoutRatio")
+                    ),
+                    dividend_score=score.dividend_score,
+                    final_score=score.final_score,
+                    risk_score=score.risk_score,
+                    recommendation=score.recommendation,
                 )
-                for index, snapshot in enumerate(snapshots, start=1)
+                for index, (score, metrics) in enumerate(rows, start=1)
             ],
         )

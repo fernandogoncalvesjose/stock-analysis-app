@@ -12,7 +12,10 @@ class DividendRankingItemDTO(BaseModel):
     company_name: str
     sector: str | None
     dividend_yield: Decimal | None
-    composite_score: Decimal
+    payout_ratio: Decimal | None
+    dividend_score: Decimal | None
+    final_score: Decimal
+    risk_score: Decimal | None
     recommendation: Recommendation
 
 

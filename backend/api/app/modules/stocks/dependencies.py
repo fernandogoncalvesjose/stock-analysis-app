@@ -18,3 +18,12 @@ def get_stock_service(
     repository: Annotated[StockRepository, Depends(get_stock_repository)],
 ) -> StockService:
     return StockService(repository)
+
+
+def get_score_service(
+    session: Annotated[AsyncSession, Depends(get_db_session)],
+):
+    # lazy import to avoid circular deps
+    from batch.app.services.score_service import ScoreService
+
+    return ScoreService(session)

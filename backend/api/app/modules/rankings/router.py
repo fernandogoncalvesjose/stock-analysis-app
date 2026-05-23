@@ -14,6 +14,6 @@ router = APIRouter(prefix="/rankings", tags=["rankings"])
 async def get_dividend_ranking(
     service: Annotated[RankingService, Depends(get_ranking_service)],
     date_: Annotated[date | None, Query(alias="date")] = None,
-    limit: Annotated[int, Query(ge=1, le=100)] = 20,
+    limit: Annotated[int, Query(ge=1, le=100)] = 10,
 ) -> DividendRankingDTO:
     return await service.get_dividend_ranking(date_, limit)

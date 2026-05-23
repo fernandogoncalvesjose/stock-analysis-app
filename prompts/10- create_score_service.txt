@@ -1,0 +1,16 @@
+Crie um ScoreService para calcular e persistir scores.
+
+Fluxo:
+1. buscar últimas métricas da ação
+2. calcular scores usando ScoreEngine
+3. gerar recommendation
+4. salvar em stock_scores
+5. evitar duplicidade para o mesmo stock_id + reference_date
+
+Requisitos:
+- async SQLAlchemy
+- transaction safety
+- idempotência
+- logs estruturados
+- tratamento de erro
+- clean architecture

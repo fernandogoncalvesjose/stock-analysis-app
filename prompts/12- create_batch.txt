@@ -1,0 +1,10 @@
+Crie um script Python para calcular scores em batch.
+
+Requisitos:
+- receber lista de tickers opcional
+- se não receber, processar todos os stocks ativos
+- calcular latest metrics
+- salvar stock_scores
+- logs
+- tolerância a falhas
+- resumo final
